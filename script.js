@@ -30,7 +30,22 @@ var checkDead = setInterval(function() {
     }
 }, 10);
 }
-
+function fake_jump(){
+    if(start == true){
+        msg.innerHTML = "Game Started..."
+        bg.style.animation = " move 60s infinite linear"
+        block.style.animation = "block 1s infinite linear";
+        
+        start = false
+        check();           
+    }
+    else{
+    // var c = Math.floor(counter/100);
+    // console.log( c,t/(1*(0.1*c)) )
+    // block.style.animation = "block "+(t/(1*(0.1*c)))+"s infinite linear";
+     jump();
+    }
+}
 document.body.onkeyup = function(e){
     if(e.keyCode == 32){
         if(start == true){
