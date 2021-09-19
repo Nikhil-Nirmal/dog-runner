@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+:root{
+    --p-width : 1000px;
+    --p-height :500px;
+}
+
+
+#character{
+    width: calc(var(--p-width) / 7);
+    transform: scaleX(-1);
+    height: calc(var(--p-height) / 4);
+    background-image: url("dog.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position:relative;
+    top:75%;
+    left: 10%;
+}
+.animate{
+    animation: jump 0.3s linear;
+}
+@keyframes jump{
+    0%{top: calc(var(--p-height) / 2);}
+    20%{top: calc(var(--p-height) / 3);}
+    80%{top: calc(var(--p-height) / 3);}
+    100%{top: calc(var(--p-height) / 2);}
+}
+
+#block{
+    background-image: url("stone.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: calc(var(--p-width) / 10);
+    height: calc(var(--p-height) / 8);
+    position: relative;
+    top: 58%;
+    left: 70%;
+    animation: none;
+}
+
+@keyframes block{
+    0%{left: 100%}
+    100%{left:-50px}
+}
+
+
+p{
+    text-align: center;
+    font-size: 2.5rem
+}
+button{
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display:block;
+}
+
+#msg{
+    text-align: center;
+    margin-top: 2.5rem;
+}
+#game{
+    border-radius: 3rem;
+    background-image: url("back.gif");
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    width: var(--p-width);
+    height: var(--p-height);
+    border: 1px solid black;
+    margin: 1rem auto 2rem  auto;
+    animation: none;
+}
+@keyframes move {
+    from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: -10000px 0;
+      }
+}
+
+body {
+    color: white;
+    background:url(background.jpg) center no-repeat;
+    background-size: cover;
+}
+
