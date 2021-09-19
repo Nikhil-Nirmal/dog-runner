@@ -20,7 +20,7 @@ var checkDead = setInterval(function() {
     if(blockLeft>50 && blockLeft<120 && characterTop>=300){
         block.style.animation = "none";
         bg.style.animation = "none";
-        msg.innerHTML = "Try again!!  your score : "+Math.floor(counter/100) +" <br> Press spacebar to restart";
+        msg.innerHTML = "Try again!!  your score : "+Math.floor(counter/100) +" <br> Press spacebar or tap on the screen to restart";
         clearInterval(checkDead);
         counter = 0;
         start = true;
